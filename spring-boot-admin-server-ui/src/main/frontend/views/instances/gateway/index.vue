@@ -37,17 +37,6 @@
         required: true
       }
     },
-    install({viewRegistry}) {
-      viewRegistry.addView({
-        name: 'instances/gateway',
-        parent: 'instances',
-        path: 'gateway',
-        component: this,
-        label: 'Gateway',
-        group: 'Web',
-        order: 960,
-        isEnabled: ({instance}) => instance.hasEndpoint('gateway')
-      });
-    }
+
   }
 </script>

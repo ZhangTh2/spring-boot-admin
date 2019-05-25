@@ -17,7 +17,7 @@
 <template>
   <div class="box">
     <h1 class="is-size-6">
-      Environment Manager
+      环境管理
     </h1>
     <datalist id="allPropertyNames">
       <option v-for="name in allPropertyNames" :key="name" v-text="name" />
@@ -26,7 +26,7 @@
       <div class="field-body">
         <div class="field">
           <div class="control">
-            <input class="input" type="text" placeholder="Property name" list="allPropertyNames"
+            <input class="input" type="text" placeholder="属性名" list="allPropertyNames"
                    v-model="prop.name" @input="handlePropertyNameChange(prop, index)"
             >
           </div>
@@ -34,7 +34,7 @@
         </div>
         <div class="field">
           <div class="control has-icons-right" :class="{'is-loading' : prop.status === 'executing'}">
-            <input class="input" type="text" placeholder="Value" v-model="prop.input"
+            <input class="input" type="text" placeholder="属性值" v-model="prop.input"
                    @input="prop.status = null"
             >
             <span class="icon is-right has-text-success" v-if="prop.status === 'completed'">
@@ -60,13 +60,13 @@
                                 @click="refreshContext"
             >
               <span v-if="refreshStatus === 'completed'">
-                Context refreshed
+                刷新上下文
               </span>
               <span v-else-if="refreshStatus === 'failed'">
-                Failed
+                失败
               </span>
               <span v-else>
-                Refresh Context
+                刷新上下文
               </span>
             </sba-confirm-button>
           </div>
@@ -81,13 +81,13 @@
                     @click="resetEnvironment"
             >
               <span v-if="resetStatus === 'completed'">
-                Resetted
+                已重置
               </span>
               <span v-else-if="resetStatus === 'failed'">
-                Failed
+                失败
               </span>
               <span v-else>
-                Reset
+                重置
               </span>
             </button>
           </div>
@@ -98,13 +98,13 @@
                     @click="updateEnvironment"
             >
               <span v-if="updateStatus === 'completed'">
-                Updated
+                已更新
               </span>
               <span v-else-if="updateStatus === 'failed'">
-                Failed
+                失败
               </span>
               <span v-else>
-                Update
+                更新
               </span>
             </button>
           </div>
@@ -262,13 +262,13 @@
           this.managedProperties.forEach(property => {
             if (!property.name) {
               if (property.input) {
-                property.validation = 'Property name is required';
+                property.validation = '需要属性名';
               }
               return;
             }
             const count = counts[property.name] || 0;
             if (count > 1) {
-              property.validation = 'Property name must be unique';
+              property.validation = '属性名必须是唯一的';
               return;
             }
             property.validation = null;

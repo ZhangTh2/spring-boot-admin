@@ -124,18 +124,7 @@
     created() {
       this.fetchCaches();
     },
-    install({viewRegistry}) {
-      viewRegistry.addView({
-        name: 'instances/caches',
-        parent: 'instances',
-        path: 'caches',
-        group: 'Data',
-        component: this,
-        label: 'Caches',
-        order: 970,
-        isEnabled: ({instance}) => instance.hasEndpoint('caches')
-      });
-    }
+
   }
 </script>
 

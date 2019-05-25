@@ -132,18 +132,6 @@
     created() {
       this.fetchBeans();
     },
-    install({viewRegistry}) {
-      viewRegistry.addView({
-        name: 'instances/beans',
-        parent: 'instances',
-        path: 'beans',
-        group: 'Insights',
-        component: this,
-        label: 'Beans',
-        order: 110,
-        isEnabled: ({instance}) => instance.hasEndpoint('beans')
-      });
-    }
   }
 </script>
 

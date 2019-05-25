@@ -145,17 +145,6 @@
         }
       }
     },
-    install({viewRegistry}) {
-      viewRegistry.addView({
-        name: 'instances/liquibase',
-        parent: 'instances',
-        path: 'liquibase',
-        component: this,
-        label: 'Liquibase',
-        group: 'Data',
-        order: 900,
-        isEnabled: ({instance}) => instance.hasEndpoint('liquibase')
-      });
-    }
+
   }
 </script>å

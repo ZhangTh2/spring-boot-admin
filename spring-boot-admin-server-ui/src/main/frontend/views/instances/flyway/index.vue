@@ -126,17 +126,6 @@
         }
       }
     },
-    install({viewRegistry}) {
-      viewRegistry.addView({
-        name: 'instances/flyway',
-        parent: 'instances',
-        path: 'flyway',
-        component: this,
-        label: 'Flyway',
-        group: 'Data',
-        order: 900,
-        isEnabled: ({instance}) => instance.hasEndpoint('flyway')
-      });
-    }
+
   }
 </script>

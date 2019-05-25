@@ -99,17 +99,6 @@
         this.hasLoaded = true;
       }
     },
-    install({viewRegistry}) {
-      viewRegistry.addView({
-        name: 'instances/mappings',
-        parent: 'instances',
-        path: 'mappings',
-        group: 'Web',
-        component: this,
-        label: 'Mappings',
-        order: 450,
-        isEnabled: ({instance}) => instance.hasEndpoint('mappings')
-      });
-    }
+
   }
 </script>

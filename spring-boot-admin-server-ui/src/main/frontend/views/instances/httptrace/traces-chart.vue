@@ -22,27 +22,27 @@
     >
       <table class="is-narrow is-size-7">
         <tr>
-          <th>total requests</th>
+          <th>请求总量</th>
           <td v-text="tooltipContent.totalCount" />
         </tr>
         <tr>
-          <th>successful</th>
+          <th>成功</th>
           <td v-text="tooltipContent.totalSuccess" />
         </tr>
         <tr>
-          <th>status 4xx</th>
+          <th>4xx 状态</th>
           <td v-text="tooltipContent.totalClientErrors" />
         </tr>
         <tr>
-          <th>status 5xx</th>
+          <th>5xx 状态</th>
           <td v-text="tooltipContent.totalServerErrors" />
         </tr>
         <tr>
-          <th>max duration</th>
+          <th>最大持续时间</th>
           <td v-text="`${tooltipContent.maxTime}ms`" />
         </tr>
         <tr>
-          <th>ø duration</th>
+          <th>空持续时间</th>
           <td v-text="`${tooltipContent.avgTime}ms`" />
         </tr>
       </table>

@@ -44,18 +44,7 @@
         required: true
       }
     },
-    install({viewRegistry}) {
-      viewRegistry.addView({
-        name: 'instances/heapdump',
-        parent: 'instances',
-        path: 'heapdump',
-        component: this,
-        label: 'Heap Dump',
-        group: 'JVM',
-        order: 800,
-        isEnabled: ({instance}) => instance.hasEndpoint('heapdump')
-      });
-    }
+
   }
 </script>
 

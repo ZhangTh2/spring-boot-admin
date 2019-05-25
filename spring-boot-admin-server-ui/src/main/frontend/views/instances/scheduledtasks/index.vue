@@ -148,17 +148,6 @@
         this.hasLoaded = true;
       }
     },
-    install({viewRegistry}) {
-      viewRegistry.addView({
-        name: 'instances/scheduledtasks',
-        parent: 'instances',
-        path: 'scheduledtasks',
-        component: this,
-        label: 'Scheduled Tasks',
-        group: 'Insights',
-        order: 950,
-        isEnabled: ({instance}) => instance.hasEndpoint('scheduledtasks')
-      });
-    }
+
   }
 </script>

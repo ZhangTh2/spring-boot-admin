@@ -40,7 +40,7 @@
       </tr>
       <tr v-if="loggers.length === 0">
         <td class="is-muted" colspan="5">
-          No loggers found.
+          没有发现记录器
         </td>
       </tr>
     </tbody>

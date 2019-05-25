@@ -14,8 +14,8 @@
   - limitations under the License.
   -->
 
-<template>
-  <sba-panel title="Health">
+<template xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
+  <sba-panel title="健康信息">
     <template v-slot:actions>
       <router-link
         class="button icon-button"
@@ -29,7 +29,7 @@
         <div class="message-body">
           <strong>
             <font-awesome-icon class="has-text-warning" icon="exclamation-triangle" />
-            Fetching live health status failed. This is the last known information.
+            获取健康信息失败
           </strong>
           <p v-text="error.message" />
         </div>

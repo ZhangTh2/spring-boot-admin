@@ -15,7 +15,7 @@
   -->
 
 <template>
-  <sba-panel title="Metadata">
+  <sba-panel title="元数据">
     <div class="content metadata" v-if="metadata">
       <table class="table" v-if="!isEmptyMetadata">
         <tr v-for="(value, key) in metadata" :key="key">
@@ -26,7 +26,7 @@
         </tr>
       </table>
       <p v-else class="is-muted">
-        No metadata provided.
+       未提供元数据
       </p>
     </div>
   </sba-panel>

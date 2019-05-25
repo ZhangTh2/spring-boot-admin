@@ -33,7 +33,7 @@
         :disabled="!isConfigured || !allowReset"
         @click.stop="selectLevel(null)"
       >
-        Reset
+        重置
       </button>
     </div>
   </div>

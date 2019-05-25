@@ -152,17 +152,6 @@
         }
       }
     },
-    install({viewRegistry}) {
-      viewRegistry.addView({
-        name: 'instances/sessions',
-        parent: 'instances',
-        path: 'sessions',
-        component: this,
-        label: 'Sessions',
-        group: 'Security',
-        order: 700,
-        isEnabled: ({instance}) => instance.hasEndpoint('sessions')
-      });
-    }
+
   }
 </script>

@@ -21,7 +21,7 @@
         <div class="message-body">
           <strong>
             <font-awesome-icon class="has-text-danger" icon="exclamation-triangle" />
-            Fetching memory metrics failed.
+            获取内存信息失败
           </strong>
           <p v-text="error.message" />
         </div>
@@ -30,7 +30,7 @@
         <div class="level-item has-text-centered" v-if="current.metaspace">
           <div>
             <p class="heading has-bullet has-bullet-primary">
-              Metaspace
+              分配区域
             </p>
             <p v-text="prettyBytes(current.metaspace)" />
           </div>
@@ -38,7 +38,7 @@
         <div class="level-item has-text-centered">
           <div>
             <p class="heading has-bullet has-bullet-info">
-              Used
+              已使用
             </p>
             <p v-text="prettyBytes(current.used)" />
           </div>
@@ -46,7 +46,7 @@
         <div class="level-item has-text-centered">
           <div>
             <p class="heading has-bullet has-bullet-warning">
-              Size
+              大小
             </p>
             <p v-text="prettyBytes(current.committed)" />
           </div>
@@ -54,7 +54,7 @@
         <div class="level-item has-text-centered" v-if="current.max >= 0">
           <div>
             <p class="heading">
-              Max
+              最大
             </p>
             <p v-text="prettyBytes(current.max)" />
           </div>

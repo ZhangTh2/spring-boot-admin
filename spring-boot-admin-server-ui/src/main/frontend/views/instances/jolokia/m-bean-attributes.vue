@@ -20,7 +20,7 @@
       <div class="message-body">
         <strong>
           <font-awesome-icon class="has-text-danger" icon="exclamation-triangle" />
-          Fetching attributes failed.
+          获取属性错误
         </strong>
         <p v-text="error.message" />
       </div>

@@ -207,18 +207,7 @@
         }
       }
     },
-    install({viewRegistry}) {
-      viewRegistry.addView({
-        name: 'instances/metrics',
-        parent: 'instances',
-        path: 'metrics',
-        component: this,
-        label: 'Metrics',
-        group: 'Insights',
-        order: 50,
-        isEnabled: ({instance}) => instance.hasEndpoint('metrics')
-      });
-    }
+
   }
 </script>
 

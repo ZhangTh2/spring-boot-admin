@@ -21,7 +21,7 @@
         <div class="message-body">
           <strong>
             <font-awesome-icon class="has-text-danger" icon="exclamation-triangle" />
-            Fetching traces failed.
+            获取追踪信息失败
           </strong>
           <p v-text="error.message" />
         </div>
@@ -35,7 +35,7 @@
                   class="input"
                   type="search"
                   v-model="filter.uri"
-                  placeholder="Path"
+                  placeholder="路径"
                 >
                 <span class="icon is-small is-left">
                   <font-awesome-icon icon="filter" />
@@ -52,11 +52,11 @@
             <div class="field is-narrow has-addons">
               <p class="control">
                 <span class="button is-static">
-                  limit
+                  限制显示
                 </span>
               </p>
               <p class="control">
-                <input class="input httptraces__limit" min="0" type="number" placeholder="trace limit" v-model="limit">
+                <input class="input httptraces__limit" min="0" type="number" placeholder="限制数量" v-model="limit">
               </p>
             </div>
           </div>
@@ -66,7 +66,7 @@
             <div class="control">
               <label class="checkbox">
                 <input type="checkbox" v-model="filter.showSuccess">
-                success
+                成功
               </label>
             </div>
           </div>
@@ -74,7 +74,7 @@
             <div class="control">
               <label class="checkbox">
                 <input type="checkbox" v-model="filter.showClientErrors">
-                client errors
+                客户端错误
               </label>
             </div>
           </div>
@@ -82,7 +82,7 @@
             <div class="control">
               <label class="checkbox">
                 <input type="checkbox" v-model="filter.showServerErrors">
-                server errors
+                服务端错误
               </label>
             </div>
           </div>
@@ -284,8 +284,7 @@
         parent: 'instances',
         path: 'httptrace',
         component: this,
-        label: 'Http Traces',
-        group: 'Web',
+        label: '请求追踪',
         order: 500,
         isEnabled: ({instance}) => instance.hasEndpoint('httptrace')
       });

@@ -20,7 +20,7 @@
       <div class="message-body">
         <strong>
           <font-awesome-icon class="has-text-danger" icon="exclamation-triangle" />
-          Fetching loggers failed.
+          获取记录器失败
         </strong>
         <p v-text="error.message" />
       </div>
@@ -35,7 +35,7 @@
                 class="loggers__toggle-scope button is-primary is-active"
                 @click="$emit('changeScope', 'instance')"
               >
-                <font-awesome-icon icon="cubes" />&nbsp;Application
+                <font-awesome-icon icon="cubes" />&nbsp;服务
               </button>
               <button
                 v-else
@@ -47,10 +47,10 @@
             </div>
             <p class="help has-text-centered">
               <span v-if="scope === 'application'">
-                Affects all <span v-text="instanceCount" /> instances
+                改变全部 <span v-text="instanceCount" /> 个实例
               </span>
               <span v-else>
-                Affects only this instance
+                只改变当前实例
               </span>
             </p>
           </div>
@@ -76,13 +76,13 @@
                 <div class="control">
                   <label class="checkbox">
                     <input type="checkbox" v-model="filter.classOnly">
-                    class only
+                    只显示类
                   </label>
                 </div>
                 <div class="control">
                   <label class="checkbox">
                     <input type="checkbox" v-model="filter.configuredOnly">
-                    configured
+                    配置相关
                   </label>
                 </div>
               </div>

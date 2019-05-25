@@ -21,7 +21,7 @@
         <div class="message-body">
           <strong>
             <font-awesome-icon class="has-text-danger" icon="exclamation-triangle" />
-            Fetching threaddump failed.
+            获取线程信息失败
           </strong>
           <p v-text="error.message" />
         </div>
@@ -130,8 +130,7 @@
         parent: 'instances',
         path: 'threaddump',
         component: this,
-        label: 'Threads',
-        group: 'JVM',
+        label: '线程信息',
         order: 400,
         isEnabled: ({instance}) => instance.hasEndpoint('threaddump')
       });

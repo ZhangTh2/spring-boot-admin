@@ -23,11 +23,11 @@
       </h2>
       <sba-tags v-if="instance" :tags="instance.tags" />
       <div class="details-header__urls">
-        <a class="button is-small " :href="instance.registration.serviceUrl">
+        <a class="button is-small " >
           <font-awesome-icon icon="home" />&nbsp;
           <span v-text="instance.registration.serviceUrl" />
         </a>
-        <a class="button is-small " :href="instance.registration.managementUrl">
+        <a class="button is-small " >
           <font-awesome-icon icon="wrench" />&nbsp;
           <span v-text="instance.registration.managementUrl" />
         </a>
@@ -42,7 +42,7 @@
       <div class="message-body">
         <strong>
           <font-awesome-icon class="has-text-danger" icon="exclamation-triangle" />
-          Fetching metrics index failed.
+          获取java信息失败
         </strong>
         <p v-text="error.message" />
       </div>
@@ -174,8 +174,7 @@
         parent: 'instances',
         path: 'details',
         component: this,
-        label: 'Details',
-        group: 'Insights',
+        label: '应用信息',
         order: 0
       });
     }

@@ -21,7 +21,7 @@
         <div class="message-body">
           <strong>
             <font-awesome-icon class="has-text-danger" icon="exclamation-triangle" />
-            Fetching process metrics failed.
+            获取线程监控数据失败
           </strong>
           <p v-text="error.message" />
         </div>
@@ -38,7 +38,7 @@
         <div class="level-item has-text-centered" v-if="uptime">
           <div>
             <p class="heading">
-              Uptime
+              运行时间
             </p>
             <p>
               <process-uptime :value="toMillis(uptime.value, uptime.baseUnit)" />
@@ -48,7 +48,7 @@
         <div class="level-item has-text-centered" v-if="processCpuLoad">
           <div>
             <p class="heading">
-              Process CPU Usage
+              CPU线程数
             </p>
             <p v-text="processCpuLoad.toFixed(2)" />
           </div>
@@ -56,7 +56,7 @@
         <div class="level-item has-text-centered" v-if="systemCpuLoad">
           <div>
             <p class="heading">
-              System CPU Usage
+              系统CPU使用
             </p>
             <p v-text="systemCpuLoad.toFixed(2)" />
           </div>
@@ -64,7 +64,7 @@
         <div class="level-item has-text-centered" v-if="systemCpuCount">
           <div>
             <p class="heading">
-              CPUs
+              CPU数量
             </p>
             <p v-text="systemCpuCount" />
           </div>

@@ -15,13 +15,13 @@
   -->
 
 <template>
-  <sba-panel title="Info">
+  <sba-panel title="信息">
     <div>
       <div v-if="error" class="message is-warning">
         <div class="message-body">
           <strong>
             <font-awesome-icon class="has-text-warning" icon="exclamation-triangle" />
-            Fetching live info failed. This is the last known information.
+            获取信息失败
           </strong>
           <p v-text="error.message" />
         </div>
@@ -36,7 +36,7 @@
           </tr>
         </table>
         <p v-else class="is-muted">
-          No info provided.
+          未提供信息
         </p>
       </div>
     </div>

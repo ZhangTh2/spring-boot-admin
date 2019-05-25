@@ -19,25 +19,25 @@
     <thead>
       <tr>
         <th class="httptraces__trace-timestamp">
-          Timestamp
+          时间
         </th>
         <th class="httptraces__trace-method">
-          Method
+          请求方式
         </th>
         <th class="httptraces__trace-uri">
-          Path
+          路径
         </th>
         <th class="httptraces__trace-status">
-          Status
+          状态
         </th>
         <th class="httptraces__trace-contentType">
-          Content-Type
+          内容类型
         </th>
         <th class="httptraces__trace-contentLength">
-          Length
+          长度
         </th>
         <th class="httptraces__trace-timeTaken">
-          Time
+          时间
         </th>
       </tr>
     </thead>
@@ -46,7 +46,7 @@
         <td
           colspan="7"
           class="has-text-primary has-text-centered is-selectable"
-          v-text="`${newTracesCount} new traces`"
+          v-text="`${newTracesCount} 个新追踪`"
           @click="$emit('show-new-traces')"
         />
       </tr>

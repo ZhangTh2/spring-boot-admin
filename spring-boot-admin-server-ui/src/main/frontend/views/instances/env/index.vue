@@ -20,7 +20,7 @@
       <div class="message-body">
         <strong>
           <font-awesome-icon class="has-text-danger" icon="exclamation-triangle" />
-          Fetching environment failed.
+          拉取环境信息错误
         </strong>
         <p v-text="error.message" />
       </div>
@@ -29,7 +29,7 @@
       <div class="control" v-for="profile in env.activeProfiles" :key="profile">
         <div class="tags has-addons">
           <span class="tag is-medium is-primary">
-            Profile
+            配置
           </span>
           <span class="tag is-medium" v-text="profile" />
         </div>
@@ -67,7 +67,7 @@
         </tr>
       </table>
       <p class="is-muted" v-else>
-        No properties set
+        无属性设置
       </p>
     </sba-panel>
   </section>
@@ -151,8 +151,7 @@
         parent: 'instances',
         path: 'env',
         component: this,
-        label: 'Environment',
-        group: 'Insights',
+        label: '环境信息',
         order: 100,
         isEnabled: ({instance}) => instance.hasEndpoint('env')
       });

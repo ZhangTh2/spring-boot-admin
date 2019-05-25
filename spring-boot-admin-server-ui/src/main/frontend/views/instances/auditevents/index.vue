@@ -198,17 +198,5 @@
         this.events = uniqBy(this.events ? events.concat(this.events) : events, event => event.key);
       }
     },
-    install({viewRegistry}) {
-      viewRegistry.addView({
-        name: 'instances/auditevents',
-        parent: 'instances',
-        path: 'auditevents',
-        component: this,
-        label: 'Audit Log',
-        group: 'Security',
-        order: 600,
-        isEnabled: ({instance}) => instance.hasEndpoint('auditevents')
-      });
-    }
   }
 </script>

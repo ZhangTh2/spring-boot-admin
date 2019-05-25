@@ -19,7 +19,7 @@
     <thead>
       <tr>
         <th class="threads__thread-name">
-          Name
+          线程名
         </th>
         <th class="threads__timeline">
           <svg class="threads__scale" height="24px" />
@@ -45,49 +45,49 @@
           <td colspan="2">
             <table class="threads__thread-details table is-narrow is-fullwidth has-background-white-ter">
               <tr>
-                <td>Thread Id</td>
+                <td>线程序号</td>
                 <td v-text="thread.threadId" />
               </tr>
               <tr>
-                <td>Thread name</td>
+                <td>线程名称</td>
                 <td v-text="thread.threadName" />
               </tr>
               <tr>
-                <td>Thread state</td>
+                <td>线程状态</td>
                 <td v-text="thread.threadState" />
               </tr>
               <template v-if="thread.details !== null">
                 <tr>
-                  <td>Blocked count</td>
+                  <td>阻塞数量</td>
                   <td v-text="thread.details.blockedCount" />
                 </tr>
                 <tr>
-                  <td>Blocked time</td>
+                  <td>阻塞时间</td>
                   <td v-text="thread.details.blockedTime" />
                 </tr>
                 <tr>
-                  <td>Waited count</td>
+                  <td>等待数量</td>
                   <td v-text="thread.details.waitedCount" />
                 </tr>
                 <tr>
-                  <td>Waited time</td>
+                  <td>等待时间</td>
                   <td v-text="thread.details.waitedTime" />
                 </tr>
                 <tr>
-                  <td>Lock name</td>
+                  <td>线程锁</td>
                   <td v-text="thread.details.lockName" />
                 </tr>
                 <tr>
-                  <td>Lock owner id</td>
+                  <td>线程所有者id</td>
                   <td v-text="thread.details.lockOwnerId" />
                 </tr>
                 <tr>
-                  <td>Lock owner name</td>
+                  <td>线程所有者名称</td>
                   <td v-text="thread.details.lockOwnerName" />
                 </tr>
                 <tr v-if="thread.details.stackTrace.length > 0">
                   <td colspan="2">
-                    Stacktrace
+                    追踪栈
                     <pre class="threads__thread-stacktrace"><template
                       v-for="(frame, idx) in thread.details.stackTrace"
                     ><span
@@ -96,7 +96,7 @@
                     /> <span
                       :key="`frame-${thread.threadId}-${idx}-native`"
                       class="tag is-dark" v-if="frame.nativeMethod"
-                    >native</span>
+                    >原生</span>
                     </template></pre>
                   </td>
                 </tr>

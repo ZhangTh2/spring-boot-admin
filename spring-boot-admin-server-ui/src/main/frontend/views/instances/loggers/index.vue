@@ -59,7 +59,7 @@
         parent: 'instances',
         path: 'loggers',
         component: this,
-        label: 'Loggers',
+        label: '记录器',
         group: 'Logging',
         order: 300,
         isEnabled: ({instance}) => instance.hasEndpoint('loggers')

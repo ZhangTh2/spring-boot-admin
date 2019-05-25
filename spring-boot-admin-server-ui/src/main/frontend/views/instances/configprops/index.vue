@@ -164,18 +164,6 @@
         }
         this.hasLoaded = true;
       }
-    },
-    install({viewRegistry}) {
-      viewRegistry.addView({
-        name: 'instances/configprops',
-        parent: 'instances',
-        path: 'configprops',
-        component: this,
-        label: 'Configuration Properties',
-        group: 'Insights',
-        order: 110,
-        isEnabled: ({instance}) => instance.hasEndpoint('configprops')
-      });
     }
   }
 </script>
